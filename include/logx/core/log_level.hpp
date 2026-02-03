@@ -7,7 +7,8 @@ namespace logx {
         Info,
         Debug,
         Warn,
-        Error
+        Error,
+        LEVEL_COUNT
     };
 
     constexpr std::string_view to_string(LogLevel level) {

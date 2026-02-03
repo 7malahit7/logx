@@ -1,6 +1,6 @@
+#pragma once
 #include "log_level.hpp"
 #include <string>
-
 
 namespace logx {
     struct LogEntry {
