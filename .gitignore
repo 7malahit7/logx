@@ -25,5 +25,5 @@ Thumbs.db
 *~
 
 # Binaries
-logx
+/build/logx
 !resources/samples/*.log
