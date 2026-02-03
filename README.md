@@ -38,18 +38,19 @@ YYYY-MM-DD HH:MM:SS [LEVEL] [MODULE] MESSAGE
 
 ## Сборка проекта
 
-```bash
-mkdir build
-cd build
-cmake ..
-cmake --build .
+
+- mkdir build
+- cd build
+- cmake ..
+- cmake --build .
 
 Запуск unit-тестов
-cd build
-./logx_tests
+- cd build
+- ./logx_tests
 
 Для тестирования используется GoogleTest, подключённый через
 FetchContent.
 GoogleTest линкуется только с тестовым таргетом и не используется
 в production-коде.
+
 
