@@ -1,0 +1,9 @@
+2026-01-12 10:15:26 [INFO] [System] Application started
+2026-01-12 10:15:27 [DEBUG] [Config] Loaded configuration file
+2026-01-12 10:15:28 [WARN] [Network] Connection is slow
+2026-01-12 10:15:29 [ERROR] [FileSystem] Failed to open file
+2026-01-12 10:15:30 [INFO] [System] Retrying operation
+2026-01-12 10:15:31 [ERROR] [Network] Connection lost
+
+THIS IS A BROKEN LINE
+2026-01-12 [INFO] Missing time

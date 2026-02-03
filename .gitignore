@@ -26,3 +26,4 @@ Thumbs.db
 
 # Binaries
 logx
+!resources/samples/*.log
