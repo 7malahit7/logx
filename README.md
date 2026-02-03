@@ -27,19 +27,6 @@ YYYY-MM-DD HH:MM:SS [LEVEL] [MODULE] MESSAGE
 
 ---
 
-## Архитектура проекта
-logx/
-├── include/ публичные заголовки
-│ └── logx/
-│ ├── core/ доменная логика (Analyzer, LogEntry)
-│ ├── parser/ парсеры логов
-│ └── report/ генерация отчётов
-├── src/ реализации
-├── tests/ unit и regression тесты
-├── third_party/ зависимости (FetchContent)
-└── CMakeLists.txt
-
-
 ### Ключевые архитектурные принципы
 
 - разделение ответственности (core / parser / cli)
@@ -65,3 +52,4 @@ cd build
 FetchContent.
 GoogleTest линкуется только с тестовым таргетом и не используется
 в production-коде.
+
