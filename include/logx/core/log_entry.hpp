@@ -11,5 +11,4 @@ namespace logx {
 
         bool operator==(const LogEntry&) const = default;
     };
-
 }

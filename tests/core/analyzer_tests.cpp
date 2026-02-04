@@ -3,9 +3,6 @@
 
 namespace logx {
 
-    constexpr std::size_t log_level_to_index (LogLevel level) {
-        return static_cast<std::size_t>(level) ;
-    }
     static LogEntry new_entry(LogLevel level) {
         return {
         .timestamp  = "2026-01-01 00:00:00",
@@ -27,9 +24,7 @@ namespace logx {
 
 
         Analyzer analyzer;
-        LogEntry entry;
-
-        entry = new_entry(LogLevel::Info);
+        LogEntry entry = new_entry(LogLevel::Info);
 
         analyzer.add_entry(entry);
 

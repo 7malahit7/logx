@@ -3,6 +3,11 @@
 #include <string_view>
 
 namespace logx {
+    enum class LogLevel;
+
+    constexpr std::size_t log_level_to_index (LogLevel level) {
+        return static_cast<std::size_t>(level) ;
+    }
     enum class LogLevel {
         Info,
         Debug,
