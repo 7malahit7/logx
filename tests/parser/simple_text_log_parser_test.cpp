@@ -57,12 +57,12 @@ TEST(SimpleTextLogParser, InvalidModule)
     auto result = parser.parse(line);
 
     ASSERT_FALSE(result.ok());
-    ASSERT_EQ(result.error(), logx::ParseError::InvalidModule);
+    ASSERT_EQ(result.error(), logx::ParseError::InvalidFormat);
 }
 TEST(SimpleTextLogParser, EmptyMessage)
 {
     logx::SimpleTextLogParser parser;
-    std::string_view line = "2026-01-12 10:15:26 [INFO] [Core]";
+    std::string_view line = "2026-01-12 10:15:26 [INFO] [Core] ";
 
     auto result = parser.parse(line);
 

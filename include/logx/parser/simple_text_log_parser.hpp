@@ -8,8 +8,7 @@ namespace  logx {
     class SimpleTextLogParser : public ILogParser{
         private:
             static bool isValidTimeStamp(std::string_view time_stamp);
-            static std::optional<LogLevel> isValidLogLevel(std::string_view log_level);
-            static bool isValidLogModule(std::string_view log_module);
+            static std::optional<LogLevel> logLevelValidation(std::string_view log_level);
             static bool isValidLogMessage(std::string_view log_message);
 
         public:

@@ -27,3 +27,10 @@ Thumbs.db
 # Binaries
 /build/logx
 !resources/samples/*.log
+_deps/
+_deps/**
+**/cmake_install.cmake
+build.ninja
+.ninja_log
+.ninja_deps
+
