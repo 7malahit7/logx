@@ -13,7 +13,7 @@ TEST(SimpleTextLogParser, ParsesValidLine) {
 
     ASSERT_TRUE(result.ok());
     EXPECT_EQ(result.value().timestamp, "2026-01-12 10:15:26");
-    EXPECT_EQ(result.value().level, logx::LogLevel::Info);
+    EXPECT_EQ(result.value().level, logx::LogLevel::INFO);
     EXPECT_EQ(result.value().module, "Core");
     EXPECT_EQ(result.value().message, "Application started");
 }
@@ -48,6 +48,16 @@ TEST(SimpleTextLogParser, InvalidTimestamp)
 
     ASSERT_FALSE(result.ok());
     ASSERT_EQ(result.error(), logx::ParseError::InvalidTimestamp);
+}
+TEST(SimpleTextLogParser, InvalidModule)
+{
+    logx::SimpleTextLogParser parser;
+    std::string_view line = "2026-01-12 10:15:26 [INFO] [] Application started";
+
+    auto result = parser.parse(line);
+
+    ASSERT_FALSE(result.ok());
+    ASSERT_EQ(result.error(), logx::ParseError::InvalidModule);
 }
 TEST(SimpleTextLogParser, EmptyMessage)
 {

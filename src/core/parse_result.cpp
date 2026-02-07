@@ -3,11 +3,11 @@
 logx::ParseResult::ParseResult(std::variant<LogEntry, ParseError> value) : _value(std::move(value)){}
 
 logx::ParseResult logx::ParseResult::success(LogEntry log_entry) {
-    return ParseResult(std::move(log_entry));
+    return ParseResult(log_entry);
 }
 
 logx::ParseResult logx::ParseResult::failure(ParseError error_type) {
-    return ParseResult(std::move(error_type));
+    return ParseResult(error_type);
 }
 
 bool logx::ParseResult::ok() const {

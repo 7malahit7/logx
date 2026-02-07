@@ -9,20 +9,20 @@ namespace logx {
         return static_cast<std::size_t>(level) ;
     }
     enum class LogLevel {
-        Info,
-        Debug,
-        Warn,
-        Error,
+        INFO,
+        DEBUG,
+        WARN,
+        ERROR,
         LEVEL_COUNT
     };
 
     constexpr std::string_view to_string(LogLevel level) {
         switch (level) {
-            case LogLevel::Info: return "INFO";
-            case LogLevel::Debug: return "DEBUG";
-            case LogLevel::Warn: return "WARN";
-            case LogLevel::Error: return "ERROR";
+            case LogLevel::INFO: return "INFO";
+            case LogLevel::DEBUG: return "DEBUG";
+            case LogLevel::WARN: return "WARN";
+            case LogLevel::ERROR: return "ERROR";
+            default: return "UNKNOWN";
         }
-        return "UNKNOWN";
     }
 }
