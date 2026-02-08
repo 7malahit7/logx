@@ -69,3 +69,14 @@ TEST(SimpleTextLogParser, EmptyMessage)
     ASSERT_FALSE(result.ok());
     ASSERT_EQ(result.error(), logx::ParseError::EmptyMessage);
 }
+
+TEST(SimpleTextLogParser, EmptyMessageWithWideSpaces)
+{
+    logx::SimpleTextLogParser parser;
+    std::string_view line = "2026-01-12 10:15:26 [INFO] [Core]              ";
+
+    auto result = parser.parse(line);
+
+    ASSERT_FALSE(result.ok());
+    ASSERT_EQ(result.error(), logx::ParseError::EmptyMessage);
+}

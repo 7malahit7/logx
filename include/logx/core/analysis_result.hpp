@@ -10,5 +10,6 @@ namespace logx {
         std::size_t parse_errors;
 
         std::array<std::size_t, static_cast<size_t>(LogLevel::LEVEL_COUNT)> log_level_counters;
+        AnalysisResult() = default;
     };
 }

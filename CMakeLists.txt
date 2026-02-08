@@ -12,6 +12,7 @@ add_library(logx_core
         src/core/analyzer.cpp
         src/core/parse_result.cpp
         src/parser/simple_text_log_parser.cpp
+        src/report/text_report_writer.cpp
 )
 
 target_include_directories( logx_core
